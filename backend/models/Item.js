@@ -23,6 +23,7 @@ ItemSchema.pre("validate", function(next) {
   if (!this.slug) {
     this.slugify();
   }
+  if (!this.image) this.image = "/placeholder.png";
 
   next();
 });
